@@ -1,0 +1,122 @@
+.modal {
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		align-items: start;
+		.choose-color {
+			.colors {
+				margin-top: 20px;
+				gap: 5px;
+				display: flex;
+
+				.color {
+					cursor: pointer;
+					border: 3px black solid;
+					border-radius: 8px;
+					height: 30px;
+					width: 30px;
+					&.yellow {
+						border-color: rgb(255, 200, 0);
+						&.active {
+							background-color: rgb(255, 200, 0);
+						}
+					}
+					&.green {
+						border-color: rgb(50, 176, 0);
+						&.active {
+							background-color: rgb(50, 176, 0);
+						}
+					}
+					&.red {
+						border-color: rgb(255, 0, 0);
+						&.active {
+							background-color: rgb(255, 0, 0);
+						}
+					}
+					&.blue {
+						border-color: rgb(0, 21, 255);
+						&.active {
+							background-color: rgb(0, 21, 255);
+						}
+					}
+					&.purple {
+						border-color: purple;
+						&.active {
+							background-color: purple;
+						}
+					}
+				}
+			}
+		}
+	}
+	h3 {
+		text-align: center;
+		font-size: 40px;
+		margin-top: 10px;
+	}
+	label:not(:nth-child(4)) {
+		width: fit-content;
+		display: block;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	input {
+		margin-bottom: 30px;
+		border: none;
+		outline: none;
+		display: block;
+		height: 50px;
+		width: 100%;
+		background-color: rgba(124, 124, 124, 0.2);
+		border-radius: 3px;
+		padding: 0 10px;
+		margin-top: 8px;
+		font-size: 14px;
+		font-weight: 300;
+		&::placeholder {
+			color: rgb(97, 97, 97);
+		}
+	}
+	input[id='title'] {
+		width: fit-content;
+		max-width: 400px;
+	}
+	textarea {
+		margin-bottom: 30px;
+		margin-top: 10px;
+		border: none;
+		border-radius: 3px;
+		color: black;
+		font-style: 14px;
+		background-color: rgba(124, 124, 124, 0.2);
+		resize: none;
+		padding: 10px;
+		&::placeholder {
+			color: rgb(97, 97, 97);
+		}
+	}
+	input[id='type'] {
+		width: fit-content;
+		max-width: 200px;
+	}
+	button[type='submit'] {
+		margin-top: 20px;
+		width: 100%;
+		background-color: #000000;
+		color: #ffffff;
+		display: block;
+		padding: 12px 0;
+		font-size: 18px;
+		font-weight: 600;
+		border-radius: 5px;
+		transition: all 0.3s ease;
+		cursor: pointer;
+		border: #000 3px solid;
+		&:hover {
+			color: #000;
+			background: transparent;
+		}
+	}
+}

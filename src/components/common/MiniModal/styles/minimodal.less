@@ -1,0 +1,37 @@
+.mini-modal {
+	width: 200px;
+	min-height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+	background-color: white;
+	color: black;
+	font-size: 15px;
+	font-weight: 500;
+	border-radius: 8px;
+	position: fixed;
+	z-index: 1000000000;
+	text-wrap: 20px;
+	top: -200px;
+	padding: 10px;
+	right: 50px;
+	border: 1px solid #365eff;
+}
+.mini-modal.active {
+	animation: abed 5s ease;
+}
+@keyframes abed {
+	from {
+		transform: translateY(0);
+	}
+	17% {
+		transform: translateY(230px);
+	}
+	83% {
+		transform: translateY(230px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}

@@ -1,0 +1,18 @@
+.notes {
+  margin-left: 10px;
+}
+.notes button {
+  background-color: transparent;
+  color: #365eff;
+  border: 2px solid #365eff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.notes button:hover {
+  background-color: #365eff;
+  color: white;
+}

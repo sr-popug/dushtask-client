@@ -1,0 +1,13 @@
+article.time {
+  margin-bottom: 30px;
+}
+article.time p.total {
+  color: #868686;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+article.time strong {
+  font-size: 23px;
+  color: #1c1c1c;
+}

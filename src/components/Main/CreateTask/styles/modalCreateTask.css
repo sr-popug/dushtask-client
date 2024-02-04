@@ -1,0 +1,116 @@
+.modal .flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: start;
+}
+.modal .flex .choose-color .colors {
+  margin-top: 20px;
+  gap: 5px;
+  display: flex;
+}
+.modal .flex .choose-color .colors .color {
+  cursor: pointer;
+  border: 3px black solid;
+  border-radius: 8px;
+  height: 30px;
+  width: 30px;
+}
+.modal .flex .choose-color .colors .color.yellow {
+  border-color: #ffc800;
+}
+.modal .flex .choose-color .colors .color.yellow.active {
+  background-color: #ffc800;
+}
+.modal .flex .choose-color .colors .color.green {
+  border-color: #32b000;
+}
+.modal .flex .choose-color .colors .color.green.active {
+  background-color: #32b000;
+}
+.modal .flex .choose-color .colors .color.red {
+  border-color: #ff0000;
+}
+.modal .flex .choose-color .colors .color.red.active {
+  background-color: #ff0000;
+}
+.modal .flex .choose-color .colors .color.blue {
+  border-color: #0015ff;
+}
+.modal .flex .choose-color .colors .color.blue.active {
+  background-color: #0015ff;
+}
+.modal .flex .choose-color .colors .color.purple {
+  border-color: purple;
+}
+.modal .flex .choose-color .colors .color.purple.active {
+  background-color: purple;
+}
+.modal h3 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+}
+.modal label:not(:nth-child(4)) {
+  width: fit-content;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+.modal input {
+  margin-bottom: 30px;
+  border: none;
+  outline: none;
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(124, 124, 124, 0.2);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.modal input::placeholder {
+  color: #616161;
+}
+.modal input[id='title'] {
+  width: fit-content;
+  max-width: 400px;
+}
+.modal textarea {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 3px;
+  color: black;
+  font-style: 14px;
+  background-color: rgba(124, 124, 124, 0.2);
+  resize: none;
+  padding: 10px;
+}
+.modal textarea::placeholder {
+  color: #616161;
+}
+.modal input[id='type'] {
+  width: fit-content;
+  max-width: 200px;
+}
+.modal button[type='submit'] {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  display: block;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: #000 3px solid;
+}
+.modal button[type='submit']:hover {
+  color: #000;
+  background: transparent;
+}

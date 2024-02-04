@@ -1,0 +1,20 @@
+aside.main_aside {
+  min-height: 100vh;
+  border-right: #e7e7e7 2px solid;
+  padding-right: 15px;
+}
+aside.main_aside button.add_project {
+  margin-top: 20px;
+  border: 2px #365eff dashed;
+  border-radius: 8px;
+  padding: 10px 0px;
+  width: 100%;
+  color: #365eff;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+aside.main_aside button.add_project:hover {
+  border-style: solid;
+}

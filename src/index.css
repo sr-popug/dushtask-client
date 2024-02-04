@@ -1,0 +1,32 @@
+a {
+	text-decoration: none;
+}
+main {
+	padding-top: 10px;
+	display: grid;
+	grid-template-columns: 220px auto;
+}
+#root {
+	overflow: hidden;
+}
+body {
+	overflow-x: hidden;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: SF;
+}
+
+h3 {
+	margin-bottom: 20px;
+}
+main {
+	margin-top: 20px;
+	margin-left: 100px;
+}
+@font-face {
+	font-family: SF;
+	src: url(./public/SF.ttf);
+}

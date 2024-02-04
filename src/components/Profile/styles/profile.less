@@ -1,0 +1,234 @@
+section.profile {
+	margin-top: 20px;
+	margin-left: 20px;
+
+	h2 {
+		margin-bottom: 20px;
+	}
+	.profile-info {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 50px;
+		.image {
+			> img {
+				height: 188.8px;
+				border-radius: 50%;
+				width: 188.8px;
+			}
+			button {
+				border: none;
+				width: 40px;
+				height: 40px;
+
+				border-radius: 50%;
+				cursor: pointer;
+				&:hover {
+					background-color: #d8d8d8;
+				}
+			}
+		}
+		.text-info {
+			.about {
+				margin-top: 1px;
+				margin-bottom: 1px;
+				display: grid;
+				grid-template-columns: minmax(300px, auto) 50px;
+
+				.section {
+					display: flex;
+					min-width: 300px;
+					margin-right: 10px;
+					justify-content: space-between;
+					h3 {
+						font-size: 14px;
+						text-transform: uppercase;
+					}
+
+					p {
+						color: gray;
+					}
+				}
+				div.change {
+					display: flex;
+					gap: 10px;
+					justify-content: space-between;
+					align-items: stretch;
+					margin-bottom: 5px;
+					input {
+						border-radius: 10px;
+						border: 2px solid #ddd;
+						padding: 0 10px;
+					}
+					button {
+						background-color: transparent;
+						color: #365eff;
+						border: 2px solid #365eff;
+						border-radius: 10px;
+						padding: 10px 20px;
+						font-weight: 600;
+						font-size: 15px;
+						cursor: pointer;
+						transition: all ease 0.3s;
+						&:hover {
+							background-color: #365eff;
+							color: white;
+						}
+					}
+				}
+				button.change {
+					border: none;
+					cursor: pointer;
+					transition: all 0.3s ease;
+					position: relative;
+					top: -5px;
+					&:hover {
+						background-color: #e4e4e4;
+						border-radius: 5px;
+					}
+				}
+			}
+			.buttons {
+				display: flex;
+				gap: 20px;
+				align-items: center;
+				.error {
+					color: rgb(200, 0, 0);
+				}
+				justify-content: end;
+				button {
+					background-color: transparent;
+					color: rgb(200, 0, 0);
+					border: 2px solid rgb(200, 0, 0);
+					border-radius: 10px;
+					padding: 10px 20px;
+					font-weight: 600;
+					font-size: 15px;
+					cursor: pointer;
+					transition: all ease 0.3s;
+					&:hover {
+						background-color: rgb(200, 0, 0);
+						color: white;
+					}
+				}
+				button.out {
+					&:hover {
+					}
+				}
+			}
+		}
+	}
+	.menu {
+		margin-top: 30px;
+		nav {
+			ul {
+				list-style: none;
+				gap: 20px;
+				display: flex;
+				color: gray;
+				li {
+					a {
+						padding: 10px;
+						color: gray;
+						transition: all 0.3s ease;
+						&:hover {
+							color: black;
+						}
+					}
+				}
+				li > a.active {
+					color: #365eff;
+					font-weight: 600;
+					border-bottom: #365eff 3px solid;
+				}
+			}
+		}
+	}
+	.change-profile {
+		h3 {
+			width: 300px;
+			padding-top: 20px;
+		}
+		label {
+			width: 100%;
+			font-weight: 600;
+		}
+		.change_password {
+			border-color: #365eff;
+			background-color: #365eff;
+			&:hover {
+				background-color: white;
+				color: #365eff;
+			}
+		}
+		.error {
+			font-size: 14px;
+			color: rgb(208, 0, 0);
+		}
+	}
+}
+
+.change-photo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.preview {
+	img {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+	}
+}
+.not-photo {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: solid 2px #365eff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #365eff;
+	font-weight: 600;
+	font-size: 20px;
+}
+.input-file {
+	position: relative;
+	display: inline-block;
+
+	height: 50px;
+}
+input[name='file'] {
+	height: 20px;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.input-file-btn {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	width: 100%;
+	text-align: center;
+	border-radius: 4px;
+	background-color: #419152;
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 10px;
+	box-sizing: border-box;
+	border: 2px solid #419152;
+	margin: 0;
+	margin-top: 10px;
+	transition: all 0.2s;
+	&:hover {
+		color: #419152;
+		background-color: rgb(255 255 255);
+	}
+}

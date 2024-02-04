@@ -1,0 +1,211 @@
+section.profile {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+section.profile h2 {
+  margin-bottom: 20px;
+}
+section.profile .profile-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+section.profile .profile-info .image > img {
+  height: 188.8px;
+  border-radius: 50%;
+  width: 188.8px;
+}
+section.profile .profile-info .image button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+section.profile .profile-info .image button:hover {
+  background-color: #d8d8d8;
+}
+section.profile .profile-info .text-info .about {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  display: grid;
+  grid-template-columns: minmax(300px, auto) 50px;
+}
+section.profile .profile-info .text-info .about .section {
+  display: flex;
+  min-width: 300px;
+  margin-right: 10px;
+  justify-content: space-between;
+}
+section.profile .profile-info .text-info .about .section h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+section.profile .profile-info .text-info .about .section p {
+  color: gray;
+}
+section.profile .profile-info .text-info .about div.change {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 5px;
+}
+section.profile .profile-info .text-info .about div.change input {
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  padding: 0 10px;
+}
+section.profile .profile-info .text-info .about div.change button {
+  background-color: transparent;
+  color: #365eff;
+  border: 2px solid #365eff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+section.profile .profile-info .text-info .about div.change button:hover {
+  background-color: #365eff;
+  color: white;
+}
+section.profile .profile-info .text-info .about button.change {
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  top: -5px;
+}
+section.profile .profile-info .text-info .about button.change:hover {
+  background-color: #e4e4e4;
+  border-radius: 5px;
+}
+section.profile .profile-info .text-info .buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: end;
+}
+section.profile .profile-info .text-info .buttons .error {
+  color: #c80000;
+}
+section.profile .profile-info .text-info .buttons button {
+  background-color: transparent;
+  color: #c80000;
+  border: 2px solid #c80000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+section.profile .profile-info .text-info .buttons button:hover {
+  background-color: #c80000;
+  color: white;
+}
+section.profile .menu {
+  margin-top: 30px;
+}
+section.profile .menu nav ul {
+  list-style: none;
+  gap: 20px;
+  display: flex;
+  color: gray;
+}
+section.profile .menu nav ul li a {
+  padding: 10px;
+  color: gray;
+  transition: all 0.3s ease;
+}
+section.profile .menu nav ul li a:hover {
+  color: black;
+}
+section.profile .menu nav ul li > a.active {
+  color: #365eff;
+  font-weight: 600;
+  border-bottom: #365eff 3px solid;
+}
+section.profile .change-profile h3 {
+  width: 300px;
+  padding-top: 20px;
+}
+section.profile .change-profile label {
+  width: 100%;
+  font-weight: 600;
+}
+section.profile .change-profile .change_password {
+  border-color: #365eff;
+  background-color: #365eff;
+}
+section.profile .change-profile .change_password:hover {
+  background-color: white;
+  color: #365eff;
+}
+section.profile .change-profile .error {
+  font-size: 14px;
+  color: #d00000;
+}
+.change-photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.preview img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.not-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid 2px #365eff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #365eff;
+  font-weight: 600;
+  font-size: 20px;
+}
+.input-file {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+}
+input[name='file'] {
+  height: 20px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+.input-file-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #419152;
+  line-height: 22px;
+  height: 40px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border: 2px solid #419152;
+  margin: 0;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+.input-file-btn:hover {
+  color: #419152;
+  background-color: #ffffff;
+}
