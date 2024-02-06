@@ -7,4 +7,7 @@ export default defineConfig({
 	define: {
 		'process.env': {},
 	},
+	  server: {
+    origin: 'http://5.35.90.111:8080',
+  },
 })
