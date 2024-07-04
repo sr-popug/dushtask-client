@@ -3,13 +3,10 @@ import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Modal from '../../common/Modal/Modal'
 import ModalCreateTask from '../CreateTask/ModalCreateTask'
-// import commentsImg from './images/comments.svg'
 
-// import tasksImg from './images/tasks.svg'
 import Task from './Task/Task'
-import './styles/tasks.css'
+import './styles/tasks.less'
 
-// массив сортируется, те, которые законченны в конец, те кто нет в начало
 export default function Tasks() {
 	const [visible, setVisible] = useState(false)
 	const [tasks, setTasks] = useState([])
@@ -28,7 +25,7 @@ export default function Tasks() {
 	return (
 		<section className='tasks'>
 			<button className='add' onClick={() => setVisible(true)}>
-				+ Add New Task
+				+ Добавить новую задачу!
 			</button>
 			<div className='tasks_list'>
 				{tasks.length &&

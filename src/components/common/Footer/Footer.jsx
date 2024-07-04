@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import './styles/footer.css'
+import './styles/footer.less'
 
 export default function Footer() {
 	return (
@@ -8,13 +8,13 @@ export default function Footer() {
 			<div className='left-right'>
 				<div className='left'>
 					<p>
-						<strong>This</strong> website for the purpose of adding it to my
-						portfolio for hiring or taking freelance orders.
+						<strong>Этот</strong> сайт существует с целью добавления его в мое
+						портфолио, для найма или выполнения freelance заказов.
 					</p>
 				</div>
 				<div className='right'>
-					<NavLink to='/login'>
-						<button>Purchase A Subscription</button>
+					<NavLink to='#'>
+						<button>Купить подписку</button>
 					</NavLink>
 				</div>
 			</div>

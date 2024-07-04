@@ -2,7 +2,7 @@ import { observer } from 'mobx-react'
 import userStore from '../../../store/user'
 import searchImg from './images/search.svg'
 import settingImg from './images/settings.svg'
-import './styles/topHead.css'
+import './styles/topHead.less'
 const TopHeader = observer(() => {
 	let user = userStore.getUser()
 
@@ -13,7 +13,7 @@ const TopHeader = observer(() => {
 				<button>
 					<img src={searchImg} alt='' />
 				</button>
-				<input type='text' placeholder='Search...' />
+				<input type='text' placeholder='Искать...' />
 			</form>
 			{user.name && (
 				<div className='right '>
@@ -32,8 +32,8 @@ const TopHeader = observer(() => {
 			)}
 			{!user.name && (
 				<div className='right register'>
-					<a href='/registration'>Registration</a>
-					<a href='/login'>Login</a>
+					<a href='/registration'>Зарегистрироваться</a>
+					<a href='/login'>Войти</a>
 				</div>
 			)}
 		</header>

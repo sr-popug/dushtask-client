@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import modals from '../../../store/modals'
 
-import './styles/subtasks.css'
+import './styles/subtasks.less'
 import Subtask from './Subtask/Subtask'
 export default function SubTasks() {
 	const title = useRef(null)
@@ -36,9 +36,7 @@ export default function SubTasks() {
 	const submit = e => {
 		e.preventDefault()
 		if (title.current.value.trim().length < 3) {
-			return modals.setMiniModal(
-				'❌The minimum length of the Title is 3 characters'
-			)
+			return modals.setMiniModal('❌Минимальная длинна заголовка 3 символа')
 		}
 
 		axios
@@ -48,7 +46,7 @@ export default function SubTasks() {
 				taskId: +params.taskId,
 			})
 			.then(() => {
-				modals.setMiniModal('✔️The subtask has been successfully added')
+				modals.setMiniModal('✔️Подзадача успешно добавлена!')
 				setAdd(false)
 				axios
 					.get(
@@ -72,7 +70,7 @@ export default function SubTasks() {
 		<section className='subtasks'>
 			<div className='subtasks_list'>
 				<div className='flex'>
-					<h2>Subtasks:</h2>
+					<h2>Подзадачи:</h2>
 					<button className='add' onClick={addModalFn}>
 						{buttonContent}
 					</button>
@@ -81,21 +79,21 @@ export default function SubTasks() {
 					<form onSubmit={submit} action=''>
 						<div className='inputs'>
 							<div className='input-block'>
-								<h4>Title</h4>
-								<input ref={title} placeholder='Title' type='text' />
+								<h4>Заголовок</h4>
+								<input ref={title} placeholder='Заголовок' type='text' />
 							</div>
 							<div className='input-block'>
-								<h4>Description</h4>
+								<h4>Описание</h4>
 								<textarea
 									cols={45}
 									rows={7}
-									placeholder='Description'
+									placeholder='Описание'
 									ref={description}
 									type='text'
 								/>
 							</div>
 						</div>
-						<button className='add'>+ Add New Subtask</button>
+						<button className='add'>+ Добавить подзадачу</button>
 					</form>
 				)}
 				{subtasks.length &&
@@ -105,10 +103,10 @@ export default function SubTasks() {
 			</div>
 			<div className='task-description'>
 				<div className='flex'>
-					<span className={`type ${task.color}`}>{task.type}</span>
 					<h3>{task.title}</h3>
+					<span className={`type ${task.color}`}>{task.type}</span>
 				</div>
-				<h2>About: </h2>
+				<h2>О задаче: </h2>
 				<p>{task.description}</p>
 			</div>
 		</section>

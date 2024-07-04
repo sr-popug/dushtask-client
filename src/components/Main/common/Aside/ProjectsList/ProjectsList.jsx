@@ -3,7 +3,7 @@ import projects from '../../../../../store/projects'
 
 import { NavLink } from 'react-router-dom'
 import Project from './Project/Project'
-import './styles/projects.css'
+import './styles/projects.less'
 
 const ProjectsList = observer(() => {
 	const proj = projects.getProjects()
@@ -11,7 +11,7 @@ const ProjectsList = observer(() => {
 
 	return (
 		<article className='projects_list'>
-			<h3>Projects</h3>
+			<h3>Проекты</h3>
 			<div className='projects_list_list'>
 				<ul>
 					{newProj.map(project => (
@@ -20,7 +20,7 @@ const ProjectsList = observer(() => {
 				</ul>
 				{proj.length >= 5 ? (
 					<NavLink className='show_all' to={'/'}>
-						Show all {'->'}
+						Показать все {'->'}
 					</NavLink>
 				) : (
 					''

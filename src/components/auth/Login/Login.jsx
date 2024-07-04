@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import user from '../../../store/user'
 import homeImg from './images/home.svg'
-import './styles/login.css'
+import './styles/login.less'
 
 export default function Login() {
 	const email = useRef(null)
@@ -13,7 +13,7 @@ export default function Login() {
 	function submit(e) {
 		e.preventDefault()
 		if (email.current.value < 8 || password.current.value < 8) {
-			return setError('Enter the correct data')
+			return setError('Введенные данные не верны')
 		}
 		setError('')
 		axios
@@ -58,24 +58,25 @@ export default function Login() {
 				<img src={homeImg} alt='' />
 			</NavLink>
 			<form onSubmit={submit} className='auth'>
-				<h3>Login Here</h3>
+				<h3>Авторизация</h3>
 
 				<label htmlFor='email'>Email</label>
 				<input ref={email} type='text' placeholder='Email' id='email' />
 
-				<label htmlFor='password'>Password</label>
+				<label htmlFor='password'>Пароль</label>
 				<input
 					ref={password}
 					type='password'
-					placeholder='Password'
+					placeholder='Пароль'
 					id='password'
 				/>
-				<button>Log In!</button>
+				<button>Войти!</button>
 				<div className='error'>{error}</div>
 				<div className='reg-auth-not'>
 					<p>
 						{' '}
-						No account? <NavLink to='/registration'>Sign up!</NavLink>
+						Ещё нет аккаунта?{' '}
+						<NavLink to='/registration'>Зарегистрироваться!</NavLink>
 					</p>
 				</div>
 			</form>

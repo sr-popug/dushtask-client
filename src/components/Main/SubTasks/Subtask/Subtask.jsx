@@ -24,7 +24,7 @@ export default function Subtask({ subtask }) {
 				}
 			)
 			.then(() => {
-				modals.setMiniModal('✔️The subtask was changed successfully')
+				modals.setMiniModal('✔️Подзадача успешно изменена!')
 				setIsChanged(false)
 			})
 	}
@@ -45,7 +45,7 @@ export default function Subtask({ subtask }) {
 				`${import.meta.env.VITE_REACT_API_SERVER_URL}/api/subtasks/delete/${id}`
 			)
 			.then(() => {
-				modals.setMiniModal('✔️The subtask has been successfully deleted')
+				modals.setMiniModal('✔️Подзадача успешно удалена')
 			})
 	}
 	function checkedFn(id) {
@@ -79,7 +79,7 @@ export default function Subtask({ subtask }) {
 						ref={changeTitle}
 						type='text'
 						className='title'
-						placeholder='Title'
+						placeholder='Заголовок'
 					/>
 					<textarea
 						onChange={inputDescription}
@@ -87,11 +87,11 @@ export default function Subtask({ subtask }) {
 						ref={changeDescription}
 						cols={65}
 						rows={5}
-						placeholder='Description'
+						placeholder='Описание'
 						className='description'
 						type='text'
 					/>
-					<button type='submit'>Submit!</button>
+					<button type='submit'>Сохранить!</button>
 				</form>
 			)}
 			<div className='settings'>

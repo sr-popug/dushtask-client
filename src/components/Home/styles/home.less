@@ -1,11 +1,19 @@
 section.home {
 	margin: 30px 20px;
+	position: relative;
 	h2 {
-		margin-bottom: 10px;
+		margin-bottom: 70px;
 	}
 	h3.subtitle {
 		font-weight: 100;
-		color: rgb(152, 152, 152);
+		top: 00px;
+		font-weight: 900;
+		font-size: 90px;
+		position: absolute;
+		z-index: -1;
+		color: transparent;
+		text-transform: uppercase;
+		-webkit-text-stroke: #f5f5f5 0.1px;
 	}
 	article.projects {
 		display: flex;
@@ -13,12 +21,12 @@ section.home {
 		align-items: start;
 		gap: 20px;
 		.project {
-			background-color: rgb(239, 239, 239);
-			min-width: 200px;
+			min-width: 400px;
+			background-color: #f5f5f5;
 			width: fit-content;
 			padding: 10px;
 			border-radius: 10px;
-			border: 2px solid rgb(216, 216, 216);
+			border: 2px solid rgb(229, 229, 229);
 
 			.img {
 				height: 100%;

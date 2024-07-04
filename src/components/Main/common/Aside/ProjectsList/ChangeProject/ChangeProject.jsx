@@ -13,10 +13,11 @@ export default function ChangeProject({ project }) {
 		pin.current.value = project.img
 	}, [])
 	function submit(e) {
-		if (title.current.value.trim() < 3) {
-			modals.setMiniModal('❌The minimum length of the title is 3 characters')
-		}
 		e.preventDefault()
+		if (title.current.value.trim() < 3) {
+			return modals.setMiniModal('❌Минимальная длинна заголовка 4 символа')
+		}
+
 		axios
 			.patch(
 				`${import.meta.env.VITE_REACT_API_SERVER_URL}/api/projects/change/${
@@ -34,10 +35,10 @@ export default function ChangeProject({ project }) {
 	}
 	return (
 		<form onSubmit={submit} className='auth change-project'>
-			<h3>Change Project</h3>
+			<h3>Изменить проект</h3>
 			<div className='flex'>
 				<div className='elem'>
-					<label>Pin</label>
+					<label>Смайл</label>
 					<select ref={pin}>
 						<option value='🏡'>🏡</option>
 						<option value='🤪'>🤪</option>
@@ -47,19 +48,19 @@ export default function ChangeProject({ project }) {
 					</select>
 				</div>
 				<div className='elem'>
-					<label>Title</label>
-					<input ref={title} placeholder='Title' type='text' id='title' />
+					<label>Заголовок</label>
+					<input ref={title} placeholder='Заголовок' type='text' id='title' />
 				</div>
 			</div>
-			<label>Description</label>
+			<label> Описание</label>
 			<textarea
 				ref={description}
-				placeholder='Description'
+				placeholder='Описание'
 				rows='7'
 				cols='42'
 				id='description'
 			></textarea>
-			<button type='submit'>Change Project!</button>
+			<button type='submit'>Изменить проект!</button>
 		</form>
 	)
 }

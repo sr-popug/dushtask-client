@@ -32,10 +32,10 @@ export default function Registration() {
 			username.current.value.trim().length < 5 ||
 			!file.current.files[0]
 		) {
-			return setError('The entered data is not correct!')
+			return setError('Введенные данные не верны!')
 		}
 		if (password.current.value !== r_password.current.value) {
-			return setError('You repeated the password incorrectly!')
+			return setError('Пароль повторен не верно!')
 		}
 		setError('')
 		var formData = new FormData()
@@ -83,14 +83,14 @@ export default function Registration() {
 				<img src={homeImg} alt='' />
 			</NavLink>
 			<form onSubmit={submit} className='auth'>
-				<h3>Sign up Here</h3>
+				<h3>Регистрация</h3>
 				<div className='change-photo upload-photo'>
 					{fileState && (
 						<div className='preview'>
 							<img src={previewSrc} id='file-ip-1-preview' />
 						</div>
 					)}
-					{!fileState && <div className='not-photo'>Prewiew of photo</div>}
+					{!fileState && <div className='not-photo'>Превью фото</div>}
 
 					<label className='input-file'>
 						<input
@@ -103,53 +103,53 @@ export default function Registration() {
 							placeholder='Password'
 							id='password'
 						/>
-						<span className='input-file-btn'>Choose image</span>
+						<span className='input-file-btn'>Выбрать картинку</span>
 					</label>
 				</div>
 				<label htmlFor='email'>Email</label>
 				<input
 					ref={email}
 					type='text'
-					placeholder='Email (min 8 char)'
+					placeholder='Email (минимум 8 символов)'
 					id='email'
 				/>
 
-				<label htmlFor='username'>Username</label>
+				<label htmlFor='username'>Имя пользователя</label>
 				<input
 					ref={username}
 					type='text'
-					placeholder='Username (min 5 char)'
+					placeholder='Имя пользователя (минимум 5 символов)'
 					id='username'
 				/>
 
 				<div className='password'>
 					<div className='pass'>
-						<label htmlFor='password'>Password</label>
+						<label htmlFor='password'>Пароль</label>
 						<input
 							ref={password}
 							type='password'
-							placeholder='Password (min 8 char)'
+							placeholder='Пароль (минимум 8 символов)'
 							id='password'
 						/>
 					</div>
 
 					<div className='pass'>
-						<label htmlFor='repeat-password'>Repeat password</label>
+						<label htmlFor='repeat-password'>Повторите пароль</label>
 						<input
 							ref={r_password}
 							type='password'
-							placeholder='Repeat Password'
+							placeholder='Повторите пароль'
 							id='repeat-password'
 						/>
 					</div>
 				</div>
 
-				<button type='submit'>Sign Up!</button>
+				<button type='submit'>Зарегистрироваться!</button>
 				<div className='error'>{error}</div>
 				<div className='reg-auth-not'>
 					<p>
 						{' '}
-						You already have account? <NavLink to='/login'>Login!</NavLink>
+						Уже есть аккаунт? <NavLink to='/login'>Войти!</NavLink>
 					</p>
 				</div>
 			</form>

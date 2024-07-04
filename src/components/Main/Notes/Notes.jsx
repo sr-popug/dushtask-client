@@ -3,7 +3,9 @@ import axios from 'axios'
 import { useEffect, useRef, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import modals from '../../../store/modals'
-import './styles/notes.css'
+
+import './styles/notes.less'
+
 export default function Notes() {
 	const params = useParams()
 	const editorRef = useRef(null)
@@ -31,7 +33,7 @@ export default function Notes() {
 				}
 			)
 			.then(() => {
-				modals.setMiniModal('✔️ The notes are saved!')
+				modals.setMiniModal('✔️ Заметки сохранены!')
 			})
 		console.log(editorRef.current.getContent())
 	}
@@ -58,7 +60,7 @@ export default function Notes() {
 						'body { font-family:SF,Arial,sans-serif; font-size:14px }',
 				}}
 			/>
-			<button onClick={log}>Save!</button>
+			<button onClick={log}>Сохранить!</button>
 		</div>
 	)
 }

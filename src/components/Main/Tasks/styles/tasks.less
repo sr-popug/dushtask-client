@@ -1,5 +1,6 @@
 section.tasks {
-	background-color: #efefef;
+	background-color: #f5f5f5;
+	padding-bottom: 50px;
 
 	button.add {
 		width: 100%;
@@ -27,6 +28,15 @@ section.tasks {
 			padding: 20px;
 			border-radius: 10px;
 			width: 300px;
+			transition: all 0.3s ease;
+			&:hover {
+				border-color: #365eff;
+				transform: translateY(-3px);
+				box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+				.bottom {
+					border-color: #365eff;
+				}
+			}
 			.top {
 				position: relative;
 				display: flex;
@@ -121,6 +131,7 @@ section.tasks {
 			}
 
 			.bottom {
+				transition: all 0.3s ease;
 				margin-top: 10px;
 				display: flex;
 				padding-top: 10px;

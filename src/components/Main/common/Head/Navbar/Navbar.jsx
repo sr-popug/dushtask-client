@@ -1,5 +1,5 @@
 import { NavLink, useParams } from 'react-router-dom'
-import './styles/navbar.css'
+import './styles/navbar.less'
 
 export default function Navbar() {
 	const params = useParams()
@@ -7,13 +7,13 @@ export default function Navbar() {
 		<nav className='top'>
 			<ul>
 				<li>
-					<NavLink to={`/project/${params.id}/overview`}>Overview</NavLink>
+					<NavLink to={`/project/${params.id}/overview`}>Общее</NavLink>
 				</li>
 				<li>
-					<NavLink to={`/project/${params.id}/tasks`}>Tasks</NavLink>
+					<NavLink to={`/project/${params.id}/tasks`}>Задачи</NavLink>
 				</li>
 				<li>
-					<NavLink to={`/project/${params.id}/notes`}>Notes</NavLink>
+					<NavLink to={`/project/${params.id}/notes`}>Заметки</NavLink>
 				</li>
 			</ul>
 		</nav>

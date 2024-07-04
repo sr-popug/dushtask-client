@@ -25,14 +25,14 @@ export default function ChangeUser({ changeData, user, visibleFn }) {
 					modals.setMiniModal(`❌ ${err.message}`)
 				})
 		} else {
-			setError('❌ The entered password is not correct')
+			setError('❌Пароль не совпадает')
 		}
 	}
 	return (
 		<form onSubmit={submit} className='change-profile'>
-			<h3>Confirm the password</h3>
+			<h3>Подтвердить пароль</h3>
 			<div className='pass'>
-				<label htmlFor='password'>Your Password</label>
+				<label htmlFor='password'>Ваш пароль</label>
 				<input
 					ref={password}
 					type='password'
@@ -41,7 +41,7 @@ export default function ChangeUser({ changeData, user, visibleFn }) {
 				/>
 			</div>
 
-			<button type='submit'>Change!</button>
+			<button type='submit'>Изменить</button>
 			<div className='error'>{error}</div>
 		</form>
 	)

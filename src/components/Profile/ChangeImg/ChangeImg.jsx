@@ -47,14 +47,14 @@ export default function ChangeImg({ user, visibleFn }) {
 	}
 	return (
 		<form onSubmit={submit} className='change-profile change-photo'>
-			<h3>Choose a photo</h3>
+			<h3>Выберете фото</h3>
 			<div className='pass'>
 				{fileState && (
 					<div className='preview'>
 						<img src={previewSrc} id='file-ip-1-preview' />
 					</div>
 				)}
-				{!fileState && <div className='not-photo'>Prewiew of photo</div>}
+				{!fileState && <div className='not-photo'>Превью фото</div>}
 
 				<label className='input-file'>
 					<input
@@ -67,11 +67,11 @@ export default function ChangeImg({ user, visibleFn }) {
 						placeholder='Password'
 						id='password'
 					/>
-					<span className='input-file-btn'>Choose image</span>
+					<span className='input-file-btn'>Выбрать фото</span>
 				</label>
 			</div>
 
-			<button type='submit'>Change!</button>
+			<button type='submit'>Сохранить!</button>
 			<div className='error'>{error}</div>
 		</form>
 	)

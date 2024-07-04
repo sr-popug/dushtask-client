@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import './styles/progress.css'
+import './styles/progress.less'
 
 export default function Progress() {
 	const params = useParams()
@@ -63,7 +63,7 @@ export default function Progress() {
 				<h3>{proj.title}</h3>
 				<div className='progress_bar'>
 					<progress value={procent} max='100'></progress>
-					<p>{procent}% complete</p>
+					<p>на {procent}% закончен</p>
 				</div>
 			</div>
 		</div>

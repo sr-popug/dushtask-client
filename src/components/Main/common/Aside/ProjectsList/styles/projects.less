@@ -9,6 +9,8 @@ article.projects_list {
 			flex-direction: column;
 			li {
 				a {
+					transition: all 0.3s ease;
+
 					position: relative;
 					border: 2px solid #e7e7e7;
 					border-radius: 8px;
@@ -89,9 +91,11 @@ article.projects_list {
 					}
 					&.active {
 						background-color: #365eff;
+						border-color: #365eff;
 						.dop {
+							transition: all 0.3s ease;
 							&:hover {
-								background-color: #3054e3;
+								background-color: #2a4aca;
 							}
 						}
 						p {

@@ -5,7 +5,7 @@ import Modal from '../common/Modal/Modal'
 import ChangeImg from './ChangeImg/ChangeImg'
 import ChangeUser from './ChangeUser/ChangeUserModal'
 import changeImg from './images/change.svg'
-import './styles/profile.css'
+import './styles/profile.less'
 const Profile = observer(() => {
 	let user = userStore.getUser()
 	const [visible, setVisible] = useState(false)
@@ -29,13 +29,13 @@ const Profile = observer(() => {
 
 	const submit = (name, value) => {
 		if (name == 'name' && value.trim().length < 5) {
-			return setError('The minimum length is 5 char')
+			return setError('Минимальная длинна - 5 символов')
 		}
 		if (name == 'email' && value.trim().length < 10) {
-			return setError('Value is not email')
+			return setError('Введенное значение не является электронной почтой')
 		}
 		if (name == 'password' && value.trim().length < 8) {
-			return setError('The minimum length is 8 char')
+			return setError('Минимальная длинна - 8 символов')
 		}
 		setChangeData({
 			[name]: value,
@@ -58,7 +58,7 @@ const Profile = observer(() => {
 
 	return (
 		<section className='profile'>
-			<h2>Profile Info</h2>
+			<h2>Информация профиля</h2>
 			{user.id && (
 				<article className='profile-info'>
 					<div className='image'>
@@ -79,7 +79,7 @@ const Profile = observer(() => {
 						</div>
 						<div className='about'>
 							<div className='section'>
-								<h3>Name:</h3>
+								<h3>Имя:</h3>
 								<p>{user.name}</p>
 							</div>
 							<button onClick={changeNameOpen} className='change'>
@@ -87,19 +87,19 @@ const Profile = observer(() => {
 							</button>
 							{inputName && (
 								<div className='change'>
-									<input ref={nameInput} type='text' placeholder='New Name' />
+									<input ref={nameInput} type='text' placeholder='Новое имя' />
 									<button
 										onClick={() => submit('name', nameInput.current.value)}
 										type='submit'
 									>
-										Submit!
+										Сохранить!
 									</button>
 								</div>
 							)}
 						</div>
 						<div className='about'>
 							<div className='section'>
-								<h3>Mail:</h3>
+								<h3>Электронная почта: </h3>
 								<p>{user.email}</p>
 							</div>
 							<button onClick={changeMailOpen} className='change'>
@@ -107,19 +107,23 @@ const Profile = observer(() => {
 							</button>
 							{inputMail && (
 								<div className='change'>
-									<input ref={mailInput} type='text' placeholder='New Mail' />
+									<input
+										ref={mailInput}
+										type='text'
+										placeholder='Новый Email'
+									/>
 									<button
 										onClick={() => submit('email', mailInput.current.value)}
 										type='submit'
 									>
-										Submit!
+										Сохранить!
 									</button>
 								</div>
 							)}
 						</div>
 						<div className='about'>
 							<div className='section'>
-								<h3>Password:</h3>
+								<h3>Пароль:</h3>
 								<p>
 									{user.password
 										.split('')
@@ -135,13 +139,13 @@ const Profile = observer(() => {
 									<input
 										ref={passInput}
 										type='text'
-										placeholder='New Password'
+										placeholder='Новый пароль'
 									/>
 									<button
 										onClick={() => submit('password', passInput.current.value)}
 										type='submit'
 									>
-										Submit!
+										Сохранить!
 									</button>
 								</div>
 							)}
@@ -149,7 +153,7 @@ const Profile = observer(() => {
 						<div className='buttons'>
 							<p className='error'>{error}</p>
 							<button onClick={logOut} className='out'>
-								Log out
+								Выйти
 							</button>
 						</div>
 					</div>

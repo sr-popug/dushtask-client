@@ -13,6 +13,7 @@
 		"@tinymce/tinymce-react": "^4.3.2",
 		"axios": "^1.6.2",
 		"env": "^0.0.2",
+		"less": "^4.2.0",
 		"mobx": "^6.11.0",
 		"mobx-react": "^9.1.0",
 		"mobx-react-lite": "^4.0.5",

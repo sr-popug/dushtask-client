@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useRef } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
+import modals from '../../../store/modals'
 import user from '../../../store/user'
 import homeImg from './images/home.svg'
 export default function CreateProject() {
@@ -10,6 +11,10 @@ export default function CreateProject() {
 	const navigate = useNavigate()
 	function submit(e) {
 		e.preventDefault()
+
+		if (title.current.value.trim() < 3) {
+			return modals.setMiniModal('❌Минимальная длинна заголовка 4 символа')
+		}
 		axios
 			.post(`${import.meta.env.VITE_REACT_API_SERVER_URL}/api/projects`, {
 				title: title.current.value,
@@ -37,10 +42,10 @@ export default function CreateProject() {
 				<img src={homeImg} alt='' />
 			</NavLink>
 			<form onSubmit={submit} className='auth'>
-				<h3>Create Project</h3>
+				<h3>Создать проект</h3>
 				<div className='flex'>
 					<div className='elem'>
-						<label>Pin</label>
+						<label>Иконка</label>
 						<select ref={pin}>
 							<option value='🏡'>🏡</option>
 							<option value='🤪'>🤪</option>
@@ -50,19 +55,19 @@ export default function CreateProject() {
 						</select>
 					</div>
 					<div className='elem'>
-						<label>Title</label>
-						<input ref={title} placeholder='Title' type='text' id='title' />
+						<label>Заголовок</label>
+						<input ref={title} placeholder='Заголовок' type='text' id='title' />
 					</div>
 				</div>
-				<label>Description</label>
+				<label>Описание</label>
 				<textarea
 					ref={description}
-					placeholder='Description'
+					placeholder='Описание'
 					rows='7'
 					cols='42'
 					id='description'
 				></textarea>
-				<button type='submit'>Add Project!</button>
+				<button type='submit'>Добавить проект!</button>
 			</form>
 		</div>
 	)

@@ -4,7 +4,7 @@ import projectsStore from '../../store/projects.js'
 import { NavLink } from 'react-router-dom'
 import user from '../../store/user.js'
 import Project from './components/Project/Project.jsx'
-import './styles/home.css'
+import './styles/home.less'
 const Home = observer(() => {
 	let projs = projectsStore.getProjects()
 	const login = user.getUser().id
@@ -12,8 +12,8 @@ const Home = observer(() => {
 		<section className='home'>
 			{login && (
 				<>
-					<h2>Projects!</h2>
-					<h3 className='subtitle'>Your projects:</h3>
+					<h2>Проекты!</h2>
+					<h3 className='subtitle'>ВАШИ проекты:</h3>
 					<article className='projects'>
 						{projs.length &&
 							projs.map(proj => {

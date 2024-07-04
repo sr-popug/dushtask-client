@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import ProjectsList from './ProjectsList/ProjectsList'
 import Time from './Time/Time'
-import './styles/mainAside.css'
+import './styles/mainAside.less'
 
 export default function MainAside() {
 	return (
@@ -9,7 +9,7 @@ export default function MainAside() {
 			<ProjectsList />
 			<Time />
 			<NavLink to='/create_project'>
-				<button className='add_project'>+ Add Project</button>
+				<button className='add_project'>+ Добавить проект</button>
 			</NavLink>
 		</aside>
 	)

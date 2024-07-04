@@ -1,6 +1,6 @@
 import Navbar from './Navbar/Navbar'
 import Progress from './Progress/Progress'
-import './styles/head.css'
+import './styles/head.less'
 export default function Head() {
 	return (
 		<header className='head-project'>

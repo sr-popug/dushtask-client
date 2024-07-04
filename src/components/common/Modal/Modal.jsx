@@ -1,5 +1,5 @@
 import { PropTypes } from 'prop-types'
-import './styles/modal.css'
+import './styles/modal.less'
 export default function Modal({ children, visibleFn }) {
 	function setClose() {
 		visibleFn(false)

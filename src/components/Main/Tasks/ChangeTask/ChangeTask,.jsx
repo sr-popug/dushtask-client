@@ -37,7 +37,7 @@ export default function ChangeTask({ visibleFn, taskID }) {
 			)
 			.then(() => {
 				visibleFn(false)
-				modals.setMiniModal('✔️The task changed successfully')
+				modals.setMiniModal('✔️Задача успешно изменена!')
 			})
 	}
 	function colorFn(e) {
@@ -52,32 +52,32 @@ export default function ChangeTask({ visibleFn, taskID }) {
 		<>
 			<h3>Change Task</h3>
 			<form onSubmit={submit}>
-				<label htmlFor='title'>Title</label>
-				<input ref={title} type='text' id='title' placeholder='Title' />
+				<label htmlFor='title'>Заголовок</label>
+				<input ref={title} type='text' id='title' placeholder='Заголовок' />
 
-				<label htmlFor='description'>Description</label>
+				<label htmlFor='description'>Описание</label>
 				<textarea
 					ref={description}
 					cols={40}
 					rows={10}
 					type='text'
 					id='description'
-					placeholder='Description'
+					placeholder='Описание'
 				/>
 
 				<div className='flex'>
 					<div>
-						<label htmlFor='type'>Type of Task</label>
+						<label htmlFor='type'>Тип задачи</label>
 						<input
 							ref={type}
 							max={15}
 							type='text'
 							id='type'
-							placeholder='Type'
+							placeholder='Тип'
 						/>
 					</div>
 					<div className='choose-color'>
-						<label htmlFor='type'>Color of Type</label>
+						<label htmlFor='type'>Цвет типа</label>
 
 						<div className='colors'>
 							<div onClick={colorFn} className='color yellow'></div>
@@ -90,7 +90,7 @@ export default function ChangeTask({ visibleFn, taskID }) {
 				</div>
 				{/* выбор цвета среди пяти, как на сайте с кроссовками */}
 
-				<button type='submit'> Change Task!</button>
+				<button type='submit'> Изменить задачу</button>
 			</form>
 		</>
 	)

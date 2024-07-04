@@ -1,6 +1,7 @@
 import { observer } from 'mobx-react-lite'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../components/Home/Home'
+import Info from '../components/Info/Info'
 import Main from '../components/Main/Main'
 import Notes from '../components/Main/Notes/Notes'
 import Overview from '../components/Main/Overview/Overview'
@@ -32,7 +33,7 @@ const Content = observer(() => {
 								</RequireAuth>
 							}
 						/>
-
+						<Route path='/info' element={<Info />} />
 						<Route path='/' element={<Home />} />
 						<Route
 							path='/project/:id/tasks'

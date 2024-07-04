@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types'
 import Head from './common/Head/Head'
-import './styles/main.css'
+import './styles/main.less'
 
 export default function Main({ children }) {
 	return (

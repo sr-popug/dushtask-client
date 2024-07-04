@@ -62,7 +62,7 @@ export default function Project({ project }) {
 				}`
 			)
 			.then(() => {
-				modals.setMiniModal('✔️The project has been successfully deleted')
+				modals.setMiniModal('✔️Проект успешно удален')
 				projects.deleteProject(project.id)
 			})
 	}

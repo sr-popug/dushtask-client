@@ -60,9 +60,7 @@ export default function Task({ task }) {
 					task.id
 				}`
 			)
-			.then(() =>
-				modals.setMiniModal('✔️The task has been successfully deleted')
-			)
+			.then(() => modals.setMiniModal('✔️Задача успешно удалена!'))
 	}
 	return (
 		<>
@@ -77,12 +75,12 @@ export default function Task({ task }) {
 							<table>
 								<tr onClick={menuFn} className='tr'>
 									<img src={changeImg} alt='settings' />
-									Change
+									Изменить
 								</tr>
 
 								<tr onClick={deleteFn}>
 									<img src={trashImg} alt='settings' />
-									Delete
+									Удалить
 								</tr>
 							</table>
 						</div>

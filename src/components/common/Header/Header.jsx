@@ -3,7 +3,6 @@
 import { observer } from 'mobx-react-lite'
 import { NavLink } from 'react-router-dom'
 import projects from '../../../store/projects'
-import dataIcon from './images/data.svg'
 import dushIcon from './images/dush.svg'
 import infoIcon from './images/info.svg'
 import logoIcon from './images/logo.png'
@@ -11,7 +10,7 @@ import messageIcon from './images/message.svg'
 import projectIcon from './images/project.svg'
 import rateIcon from './images/rate.svg'
 import timeIcon from './images/time.svg'
-import './styles/header.css'
+import './styles/header.less'
 
 const Header = observer(() => {
 	const proj = projects.getProjects()
@@ -24,31 +23,28 @@ const Header = observer(() => {
 			<nav>
 				<NavLink to='/'>
 					<img src={dushIcon} alt='dush' />
-					<p>Home</p>
+					<p>Главная</p>
 				</NavLink>
 				<NavLink to={`/project/${proj[0]?.id}/tasks`}>
 					<img src={projectIcon} alt='project' />
-					<p>Project</p>
+					<p>Проект</p>
 				</NavLink>
 				<NavLink to='/time'>
 					<img src={timeIcon} alt='time' />
-					<p>Time</p>
+					<p>Время</p>
 				</NavLink>
-				<NavLink to='/date'>
-					<img src={dataIcon} alt='data' />
-					<p>Date</p>
-				</NavLink>
+
 				<NavLink to='/rating'>
 					<img src={rateIcon} alt='rate' />
-					<p>Rating</p>
+					<p>Рейтинг</p>
 				</NavLink>
 				<NavLink to='/message'>
 					<img src={messageIcon} alt='message' />
-					<p>Message</p>
+					<p>Сообщения</p>
 				</NavLink>
 				<NavLink to='/info'>
 					<img src={infoIcon} alt='info' />
-					<p>Info</p>
+					<p>Инфо</p>
 				</NavLink>
 			</nav>
 		</header>
