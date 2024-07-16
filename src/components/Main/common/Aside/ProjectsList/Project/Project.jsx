@@ -1,6 +1,6 @@
 import { PropTypes } from 'mobx-react'
 import { useRef, useState } from 'react'
-import { NavLink, useNavigate, useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import Modal from '../../../../../common/Modal/Modal'
 import ChangeProject from '../ChangeProject/ChangeProject'
 import DeleteProject from '../DeleteProject/DeleteProject'
@@ -11,7 +11,6 @@ import trashImg from '../images/trash.svg'
 export default function Project({ project }) {
 	const params = useParams()
 	const menuRef = useRef(null)
-	const navigate = useNavigate()
 	const [menu, setMenu] = useState(false)
 	const [visibleDelete, setVisibleDelete] = useState(false)
 	const [visibleChange, setVisibleChange] = useState(false)

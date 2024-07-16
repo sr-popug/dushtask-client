@@ -20,6 +20,7 @@ section.tasks {
 	.tasks_list {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-around;
 		gap: 30px;
 		.task {
 			cursor: pointer;
@@ -174,6 +175,26 @@ section.tasks {
 					}
 					img {
 						width: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 795px) {
+	.subtasks {
+		margin-left: 0;
+		.subtasks_list {
+			.subtask {
+				width: calc(100vw - 30px);
+				min-width: 200px;
+				.settings {
+					flex-wrap: wrap;
+				}
+				form.text {
+					textarea,
+					input {
+						font-size: 1rem;
 					}
 				}
 			}

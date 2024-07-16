@@ -228,3 +228,57 @@
 		}
 	}
 }
+@media screen and (max-width: 900px) {
+	.subtasks {
+		margin-left: 0;
+		.task-description {
+			min-width: 200px;
+			.flex {
+				flex-wrap: wrap;
+			}
+		}
+		.subtasks_list {
+		}
+	}
+}
+@media screen and (max-width: 795px) {
+	.subtasks {
+		margin-left: 0;
+		.task-description {
+			min-width: 200px;
+			.flex {
+				flex-wrap: wrap;
+			}
+		}
+		.subtasks_list {
+			.subtask {
+				width: calc(100vw - 30px);
+				min-width: 200px;
+				.settings {
+					flex-wrap: wrap;
+				}
+				form.text {
+					textarea,
+					input {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 530px) {
+	.subtasks {
+		.subtasks_list {
+			.subtask {
+				form.text {
+					width: 300px;
+					textarea,
+					input {
+						width: 300px;
+					}
+				}
+			}
+		}
+	}
+}

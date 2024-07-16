@@ -6,10 +6,8 @@ import projects from '../../../store/projects'
 import dushIcon from './images/dush.svg'
 import infoIcon from './images/info.svg'
 import logoIcon from './images/logo.png'
-import messageIcon from './images/message.svg'
+import profileIcon from './images/profile.svg'
 import projectIcon from './images/project.svg'
-import rateIcon from './images/rate.svg'
-import timeIcon from './images/time.svg'
 import './styles/header.less'
 
 const Header = observer(() => {
@@ -29,7 +27,7 @@ const Header = observer(() => {
 					<img src={projectIcon} alt='project' />
 					<p>Проект</p>
 				</NavLink>
-				<NavLink to='/time'>
+				{/* <NavLink to='/time'>
 					<img src={timeIcon} alt='time' />
 					<p>Время</p>
 				</NavLink>
@@ -41,9 +39,13 @@ const Header = observer(() => {
 				<NavLink to='/message'>
 					<img src={messageIcon} alt='message' />
 					<p>Сообщения</p>
-				</NavLink>
+				</NavLink> */}
 				<NavLink to='/info'>
 					<img src={infoIcon} alt='info' />
+					<p>Инфо</p>
+				</NavLink>
+				<NavLink to='/profile'>
+					<img src={profileIcon} alt='info' />
 					<p>Инфо</p>
 				</NavLink>
 			</nav>

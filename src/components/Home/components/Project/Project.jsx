@@ -2,9 +2,8 @@ import axios from 'axios'
 import { PropTypes } from 'mobx-react'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import modals from '../../../../store/modals'
-import projects from '../../../../store/projects'
 import ChangeProject from '../../../Main/common/Aside/ProjectsList/ChangeProject/ChangeProject'
+import DeleteProject from '../../../Main/common/Aside/ProjectsList/DeleteProject/DeleteProject'
 import Modal from '../../../common/Modal/Modal'
 import changeImg from '../../images/change.svg'
 import deleteImg from '../../images/trash.svg'
@@ -13,6 +12,8 @@ export default function Project({ project }) {
 	const [procent, setProcent] = useState(0)
 	const [subTasks, setSubtasks] = useState(0)
 	const [complete, setComplete] = useState('')
+	const [visibleDelete, setVisibleDelete] = useState(false)
+
 	const [completeSubTasks, setCompleteSubTasks] = useState(0)
 	useEffect(() => {
 		axios
@@ -52,19 +53,9 @@ export default function Project({ project }) {
 		e.preventDefault()
 		setVisible(true)
 	}
-	function deleteFn(e) {
+	const deleteFn = e => {
 		e.preventDefault()
-
-		axios
-			.delete(
-				`${import.meta.env.VITE_REACT_API_SERVER_URL}/api/projects/delete/${
-					project.id
-				}`
-			)
-			.then(() => {
-				modals.setMiniModal('✔️Проект успешно удален')
-				projects.deleteProject(project.id)
-			})
+		setVisibleDelete(true)
 	}
 	return (
 		<>
@@ -89,6 +80,11 @@ export default function Project({ project }) {
 			{visible && (
 				<Modal visibleFn={setVisible}>
 					<ChangeProject project={project} visibleFn={setVisible} />
+				</Modal>
+			)}
+			{visibleDelete && (
+				<Modal visibleFn={setVisibleDelete}>
+					<DeleteProject visibleFn={setVisibleDelete} project={project} />
 				</Modal>
 			)}
 		</>

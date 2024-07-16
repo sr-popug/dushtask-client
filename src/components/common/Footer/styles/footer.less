@@ -1,10 +1,7 @@
 footer {
-	padding-left: 20px;
-	padding: 80px 30px;
+	padding: 80px 30px 50px 30px;
 	margin-left: 80px;
-	padding-top: 80px;
-	padding-right: 30px;
-	padding-bottom: 50px;
+
 	border-top: 1px solid #e7e7e7;
 	background-color: #efefef;
 
@@ -41,5 +38,19 @@ footer {
 	.bottom {
 		color: #bbbbbb;
 		text-align: right;
+	}
+}
+@media screen and (max-width: 795px) {
+	footer {
+		margin-left: 0;
+		padding: 30px 10px 30px 10px;
+		.left-right {
+			flex-wrap: wrap;
+			.right {
+				button {
+					margin-top: 30px;
+				}
+			}
+		}
 	}
 }
