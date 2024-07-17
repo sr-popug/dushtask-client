@@ -17,6 +17,6 @@ export default defineConfig({
 		'process.env': {},
 	},
 	server: {
-		host: 'http://31.129.110.53:4173/',
+		port: 3002,
 	},
 })
