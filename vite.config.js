@@ -16,4 +16,7 @@ export default defineConfig({
 	define: {
 		'process.env': {},
 	},
+	server: {
+		host: 'http://31.129.110.53:4173/',
+	},
 })
